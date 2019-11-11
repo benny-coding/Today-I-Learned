@@ -37,8 +37,19 @@
       어떤 __로직__ 을 기준으로 __핵심적인 관점__, __부가적인 관점__ 으로 나누어서 보고 그 관점을 기준으로 각각 __모듈화__ 하는 것이다.
       ) https://engkimbs.tistory.com/746
   * __@Transactinal__ 은 __AOP__ 에서 사용하는 __Annotation__ 이다.
-
+  * __StopWatch__ 는 성능을 측정할 수 있는 클래스이다.
+  * __AOP__ 를 구현하는 방법
+    * __컴파일__ - __컴파일__ 하는 도중에 __AOP__ 작업을 한다 ( AspectJ )
+    * __바이트코드 조작__ - 클래스 로더가 컴파일된 클래스를 읽어올 때 __AOP__ 작업을 한다
+    * __프록시 패턴__ - __Spirng AOP__ 가 사용하는 방법으로 디자인 패턴을 사용하여 같은 효과를 낸다
+  * __Spring-MVC__ 의 흐름 : __Client__ -> __Dispatcherservlet__ -> __Handler Mapping__->
+                           __Controller__ -> __view__ -> __Dispatcherservlet__ -> __Client__
+  * __@RestController__ 은 __@Controller__ 와  __@ResponseBody__ 을 합쳐 놓은 __Annotation__ 으로 
+    __Spring 4.0__ 버전부터 사용할 수 있다.
+  * __@target__ 은 해당 __Annotation__ 을 어디에 쓸 것인지 정의하는 __Annotation__ 이다.
 
  ## 다른 내용들 (추가 분류 필요)
   *  __JPA__ 는 쿼리에서 스프링의 파라미터 값을 가져올때 __:파라미터__ 와 같이 가져온다.
+  * __Intellij__ 로 __Spring MVC__, __Maven__ 세팅법 https://cjh5414.github.io/intellij-spring-start/
+
   
