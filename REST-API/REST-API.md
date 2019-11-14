@@ -1,5 +1,12 @@
 # REST API
 
+## API란?
+  * `Application Programming Interface`의 약자로
+
+## REST란?
+  * `REpresentational State Transfer`의 약자이며 직역하자면 `대표적인 상태 이전`이다.
+  * 
+
 ## REST API의 구성
   * __자원(RESOURCE) - URI__
   * __행위(Verb) - HTTP METHOD__
@@ -66,6 +73,9 @@
                 (응답 시 Location header에 변경된 URI를 적어 줘야 합니다.)
     * `500` : 서버에 문제가 있을 경우 사용하는 응답 코드
 
+
+
 ## 출처 - https://meetup.toast.com/posts/92
+##     - https://www.youtube.com/watch?v=RP_f5dMoHFc 
 
    
