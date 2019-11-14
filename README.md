@@ -3,8 +3,8 @@
 I Like grow up.
 
 ## JAVA
-  * [JAVA-OOP](JAVA/OOP/Object-Oriented-Programming.md)
-
+  * [객체 지향 프로그래밍](JAVA/OOP/Object-Oriented-Programming.md)
+  * [JVM](JAVA/OOP/Java-Virtual-Machine.md)
 ## REST API
   * [REST API](REST-API/REST-API.md)
 
