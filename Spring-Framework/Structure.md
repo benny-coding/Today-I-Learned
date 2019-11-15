@@ -48,6 +48,37 @@
     `Spring 4.0` 버전부터 사용할 수 있다.
   * `@target` 은 해당 `Annotation` 을 어디에 쓸 것인지 정의하는 `Annotation` 이다.
 
+ ## 핵심기술 
+   * 스프링이란 ?
+     * 소규모 어플리케이션 또는 기업용 애플리케이션을 자바로 개발하는데 있어 유용하고 편리한 기능을 제공하는 프레임워크다
+   * IoC
+   * AOP
+   * PSA
+
+   * IoC 컨테이너와 빈 
+     * 스프링 IoC 컨테이너
+       * `BeanFactory`
+       * 애플리케이션 컴포넌트의 중앙 저장소
+       * `Bean` 설정 소스로부터 `Bean` 정의를 읽어들이고, `Bean`을 구성하고 제공한다.
+     * Bean
+       * `Bean`이란 `IoC`에서 관리하고 있는 객체를 의미합니다.
+       * 장점
+         * 의존성 관리
+         * 스코프
+           * 싱글톤 : 하나만 만들어서 사용하는 것 
+           * 프로포토타입 : 매번 다른 객체를 사용하는 것
+         * 라이프사이클 인터페이스
+       * `@Repository`와 `@Serivce`는 `@Component`를 확장한 `Annotation`이며 
+         이 3가지 `Annotation`을 등록한 클래스는 `IoC`에 `Bean`으로 등록된다.
+       * 위 작업들을 자바 코드 단에서 해결할 수 있도록 한 것이 
+     * `@Autowired`
+      
+   * 리소스
+   * 데이터 바인딩
+   * SpEL
+   * 스프링 AOP
+   * Null-Safety
+
  ## 다른 내용들 (추가 분류 필요)
   *  `JPA` 는 쿼리에서 스프링의 파라미터 값을 가져올때 `:파라미터` 와 같이 가져온다.
   * `Intellij` 로 `Spring MVC`, `Maven` 세팅법 https://cjh5414.github.io/intellij-spring-start/
