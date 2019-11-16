@@ -72,6 +72,22 @@
          이 3가지 `Annotation`을 등록한 클래스는 `IoC`에 `Bean`으로 등록된다.
        * 위 작업들을 자바 코드 단에서 해결할 수 있도록 한 것이 
      * `@Autowired`
+       * 해당 생성자, 세터, 필드에 의존성을 주입한다. 
+       * 여러 개의 Bean이 있을 경우 `@Primery`를 하나의 Bean으로 의존성을 주입할 수 있다.
+     * `BeanPostProccesor`
+       * 빈을 만든다음에 빈에 초기화
+     * `@Component`
+       * basePackagesClasses에 값을 전다하면 그 클래스 기준으로 컴포넌트를 시작한다.
+       * 기본 값은 @Component가 붙어 있는 클래스로부터 시작해 같은 패키지와 이하의 패키지를 모두 스캔을 시작한다.
+     * @Filter
+       * 
+     * @ComponentScan
+       * 
+     * 싱글톤
+       * Application 전반에 빈에 대한 인스턴스가 오직 1개 뿐이다.
+     * 프로파일
+      * Bean들의 묶음
+
       
    * 리소스
    * 데이터 바인딩
