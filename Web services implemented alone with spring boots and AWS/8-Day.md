@@ -20,4 +20,40 @@
   - 이 상태에서 데이터의 값을 변경하면 __트랜잭션이 끝나는 시점에 해당 테이블에 변경분을 반영__ 합니다.
     즉, Entity 객체의 값만 변경하면 별도로 __Update 쿼리를 날릴 필요가 없다.__
     이 개념을 __더티 체킹(dirty checking)__ 이라고 한다.
+  - JPA 사용시 SQL 맵퍼를 사용했을 때보다 좀 더 객체지향적으로 코드가 변했음을 알 수 있다.
 
+  ### 조회 기능 실제로 톰캣에서 실행해서 확인해보기
+  - 로컬 환경에서 H2를 사용하여 웹 콘솔 환경에서 확인해볼 수 있다.
+    ```java
+    spring.h2.console.enabled=true
+    ```
+    위 내용을 application.properites에 추가한다.
+    그 후 Application 클래스의 main 메소드를 실행한 후 localhost:8080/h2-console로 접속하면 웹 콘솔 화면을 볼 수 있다.
+  - 크롬에서 JSON Viewer라는 플러그인을 설치하면 Json 데이터를 가독성 있게 볼 수 있다.
+  ### JPA Auditing의 사용
+  - 날짜 타입은 LocalDate와 LocalDateTime이 등장했고 이는 기존 Date의 문제점을 고친 타입으로 무조건 사용하는 것이 좋다.
+  - __@MappedSuperclass__
+    - JPA Entity 클래스들이 BaseTimeEntity를 상속할 경우 필드들(createdDate, modifiedDate)도
+      칼럼으로 인식하도록 합니다.
+  - __@EntityListeners(AuditingEntityListener.class)__
+    - BaseTimeEntity 클래스에 Auditing 기능을 포함시킵니다.
+  - __@CreatedDate__
+    - Entity가 생성되어 저장될 때 시간이 자동 저장됩니다.
+  - __@LastModifiedDate__
+    - 조회한 Entity의 값을 변경할 때 시간이 자동 저장됩니다.
+  - JPA Auditing 어노테이션들을 모두 활성화하려면 Application 클래스에 활성화 어노테이션 하나를 추가한다.
+
+  ## 머스테치로 화면 구성하기
+    ### 서버 템플릿 엔진과 머스테치 소개
+      - 서버 템플릿 엔진이란?
+        - __지정된 템플릿 양식과 데이터__ 가 합쳐서 HTML 문서를 출력하는 소프트웨어를 이야기합니다.
+        - JSP, Freemarker는 서버 템플릿 엔진, 리액트와 뷰는 클라이언트 템플릿 엔진이다.
+      - 서버 템플릿 엔진을 이용한 화면 생성은 서버에서 Java 코드로 문자열을 만든 뒤 이 문자열을
+        HTML로 변환하여 브라우저로 전달합니다.
+      - 자바스크립트는 브라우저 위에서 작동하며 코드가 실행되는 장소는 서버가 아닌 브라우저이다.
+      - Vue.js나 React.js를 이용한 SPA는 브라우저에서 화면을 생성한다. 즉 서버에서 이미 코드가 벗어난 경우이다.
+      - 머스테치는 커뮤니티 버전을 사용해도 플러그인을 사용할 수 있다.
+    ### 기본 페이지 만들기
+      - `build.gradle`에 compile('org.springframework.boot:spring-boot-starter-mustache') 추가한다
+      - 머스테치는 __스프링 부트에서 공식지원하는 템플릿 엔진__ 이다.
+      - 파일 위치는 기본적으로 src/main/resources/templates 이다.
