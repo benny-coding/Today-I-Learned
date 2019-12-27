@@ -14,4 +14,8 @@
       - 머스테치의 레이아웃 경로는 src/main/resources/templates/layout 이다.
     - css를 header에 js를 footer에 둔 이유는 HTML은 위에서부터 코드가 실행되기 때문에
       __head가 다 실행되고서야 body가 실행되며 페이지 로딩속도가 더 빠르기 때문이다.__
-
+    - bootstrap은 제이쿼리가 꼭 있어야만 하기 때문에 제이쿼리가 먼저 호출되어야 하고
+      이런 상황을 bootstrap이 제이쿼리에 의존한다고 한다.
+    - ①{{>layout/header}}
+      - {{>}}는 현재 머스테치 파일(index.mustache)을 기준으로 다른 파일을 가져옵니다.
+      - <a> 태그로 버튼 클릭 시 이동할 경로를 지정하고 해당 경로를 Controller에서 받아서 처리한다.
