@@ -10,3 +10,10 @@
         resultCode, message, response 이 세가지이므로 user_name을 response로 한다.
         그 후 자바 코드로 response의 id를 user_name으로 지정한다.
       - /oauth2/authorization/naver
+        - 네이버 로그인 URL은 application-oauth.properties에 등록한 redirect_uri_template 
+          값에 맞춰 자동으로 등록됩니다.
+        - /oauth2/authorization/ 까지는 고정이고 마지막 Path만 각 소셜 로그인 코드를 사용하면 됩니다.
+        - 여기서 naver가 마지막 Path가 됩니다.
+  
+  ### 기존 테스트에 시큐리티 적용하기
+  - 기존 테스트에 시큐리티 적용으로 문제가 되는 부분들 해결
