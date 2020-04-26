@@ -1,0 +1,7 @@
+## Spring
+  * Spring Framework에서 의존성을 주입받는 방법 3가지 - DI / Dependency Injection
+    - [baek.Dev님의 글](https://baek.dev/post/21/#fn:2)
+
+## java
+  * 불변객체란
+    - [가그린먼트님의 글](https://brainbackdoor.tistory.com/141)
